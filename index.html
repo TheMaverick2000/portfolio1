@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ace ♠️ — Frontend Developer</title>
+  <meta name="description" content="Ace (TheMaverick2000) — frontend developer portfolio showcasing projects, skills and contact information."/>
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Ace <span class="spade">♠️</span></a>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+      <nav id="primaryNav" class="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero container">
+      <h1>Hi — I'm Ace <span class="spade">♠️</span></h1>
+      <p class="lead">A frontend developer who loves clean interfaces, small delightful interactions, and well-structured code.</p>
+      <p class="cta-row">
+        <a class="btn" href="#projects">See projects</a>
+        <a class="btn ghost" href="https://github.com/TheMaverick2000" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div>
+          <p>I build user interfaces with modern HTML, CSS and JavaScript. I focus on accessibility, performance and maintainable code. I enjoy learning new tools and shipping projects that solve real problems.</p>
+          <ul class="skills">
+            <li>HTML5 &amp; Semantic Markup</li>
+            <li>CSS3 (Flexbox, Grid, Responsive)</li>
+            <li>Vanilla JS / ES6+</li>
+            <li>Git &amp; GitHub</li>
+          </ul>
+        </div>
+        <div class="profile-card">
+          <img src="profile.jpg" alt="Ace — profile illustration" width="220" height="220"/>
+          <p class="muted">Available for freelance work & collaborations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <!-- Project cards -->
+        <article class="project-card" data-project="1">
+          <img src="project1.jpeg" alt="Project screenshot — Portfolio" />
+          <h3>Portfolio (This site)</h3>
+          <p class="muted">A responsive personal portfolio showcasing projects and contact info.</p>
+          <p><button class="btn small open-project" data-id="1">Details</button></p>
+        </article>
+
+        <article class="project-card" data-project="2">
+          <img src="project2.jpeg" alt="Project screenshot — Weather App" />
+          <h3>Weather App</h3>
+          <p class="muted">A simple weather dashboard consuming a public API with clean UI.</p>
+          <p><button class="btn small open-project" data-id="2">Details</button></p>
+        </article>
+
+        <article class="project-card" data-project="3">
+          <img src="project3.jpeg" alt="Project screenshot — Task Manager" />
+          <h3>Task Manager</h3>
+          <p class="muted">A small productivity app with add/edit/remove tasks and local storage.</p>
+          <p><button class="btn small open-project" data-id="3">Details</button></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>If you'd like to work together, send a quick message below.</p>
+      <form id="contactForm" action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
+        <label for="name">Name</label>
+        <input id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <div class="form-row">
+          <button class="btn" type="submit">Send message</button>
+          <button class="btn ghost" type="reset">Reset</button>
+        </div>
+        <p id="formStatus" role="status" aria-live="polite" class="muted"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Ace — Frontend Developer • <a href="https://github.com/TheMaverick2000" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </footer>
+
+  <!-- Project modal -->
+  <div id="projectModal" class="modal" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close project dialog">×</button>
+      <h3 id="modalTitle">Project title</h3>
+      <p id="modalDesc">Project description.</p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+      <p><a id="modalLive" class="btn small" href="#" target="_blank" rel="noopener">Live demo</a> <a id="modalCode" class="btn small ghost" href="#" target="_blank" rel="noopener">Source</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
